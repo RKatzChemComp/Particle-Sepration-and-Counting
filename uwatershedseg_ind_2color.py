@@ -109,7 +109,7 @@ def save_ind(markers,im_cation,folder):
     plt.imshow(img1)
     
 #    img2=np.swapaxes(img1,0,1)
-    img2 = img1[0:470,:,:]
+    img2 = img1[0:400,:,:]
     plt.imshow(img2)
     
     count=0
