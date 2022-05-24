@@ -3,7 +3,7 @@ READ ME
 Set up to run the demo file:
     1. Import all support pakages: matplotlib, skimage, cv2, numpy, imutils
     2. Insure demo image file is in the same directory as the watershead code (uwatershead_ind_2color.py)
-    Install Time should be less than 1 minute to download the code. Code can be run on both a lixnus and windows OS 
+    Install Time should be less than 1 minute to download the code. Code can be run on both a lixnus and windows OS. Code was written to be run in an Anaconda Envroment utlizing python 3 
 Run Segmentation 
     1. Run the watershead segmentation code (uwatershead_ind_2color.py) 
     2. Move segmented particles (all the generated png image file of individual rods) into a directory with the cntrl_file and lables code
