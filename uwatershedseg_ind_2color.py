@@ -19,12 +19,12 @@ def seg_water(filename):
     
     img1 = cv2.imread(filename)
     #plt.imshow(img1)
-    crop_img = img1[0:470, :]    
+    crop_img = img1[0:400, :]    
     img = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)    
-    #blur = cv2.bilateralFilter(img,1,10,10)
+    blur = cv2.bilateralFilter(img,1,10,10)
     #plt.imshow(blur)
     #plt.show()
-    ret, thresh = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    ret, thresh = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     
     
     
@@ -47,8 +47,8 @@ def seg_water(filename):
     
     ret2, sure_part = cv2.threshold(dist_transform, 0.1*dist_transform.max(), 255, 0)
     sure_part = np.uint8(sure_part)
-    plt.imshow(sure_part)
-    plt.show()
+    #plt.imshow(sure_part)
+    #plt.show()
     unk = cv2.subtract(sure_bg, sure_part)
     #plt.imshow(unk)
     #plt.show()
@@ -187,10 +187,10 @@ def save_ind(markers,im_cation,folder):
 #initialize the dict of file to be segmented
 dict_fil={}
 iden=0
-#filename="HAADF_HAADF.png"
 
 
-filename = 'CM401_12.png'
+
+filename = 'Demo.jpg'
 print(f'filename: {filename}')
 markers = seg_water(filename)  
 print(markers, markers.shape)         
