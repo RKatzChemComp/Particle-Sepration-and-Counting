@@ -12,8 +12,7 @@ Run Lables
     1. Insure that the HSV color codes in the cntrl_file match the regions of intrest in the particle
     2. Run the lables code (Lables_v2.5.py), calling the cntrl_file from the command line 
     3. The code will generate lists of particles in the same catigory and the number in each catigory as well as an array iforming you of the regions and the order they were found in
-       For example:"demo.jpg.14 as array (25.,102), array (94, 102)" means the particle represented in demo.jpg.14 is a rod with a blue region and a green region, which is a CdS-ZnS rod
-
+      For example: demo.jpg.18, (25.,102), array (94., 102), array (25.,102)" means the particle represented in demo.jpg.18 is a rod with a  green region then a blue region then a green region, which is a ZnS-CdS-ZnS rod
 Optimization for Files beyond the demo file:
     1. Optimzie the thresholding, itterations of opening and closing to optain cleanly segemented particles
             Look at the documentation for opencv as needed
