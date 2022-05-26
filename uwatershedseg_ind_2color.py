@@ -2,7 +2,7 @@
 """
 Created on Thu Sep 17 16:25:32 2020
 
-@author: sld5866
+@author: rkatz
 """
 
 from matplotlib import pyplot as plt
@@ -109,7 +109,7 @@ def save_ind(markers,im_cation,folder):
     plt.imshow(img1)
     
 #    img2=np.swapaxes(img1,0,1)
-    img2 = img1[0:470,:,:]
+    img2 = img1[0:400,:,:]
     plt.imshow(img2)
     
     count=0
